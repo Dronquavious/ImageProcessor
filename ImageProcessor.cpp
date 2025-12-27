@@ -9,13 +9,21 @@
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "stb_image_write.h"
 
-int main()
+int main(int argc, char* argv[])
 {
+
+	if (argc < 3) {
+		std::cout << "Usage: ImageProcessor <input_file> <output_file>" << std::endl;
+		return -1;
+	}
+
+
+
 	// hold image data
 	int width, height, channels;
 
 	// load image
-	unsigned char* image_data = stbi_load("test.jpg", &width, &height, &channels, 4);
+	unsigned char* image_data = stbi_load(argv[1], &width, &height, &channels, 4);
 
 	// checking if it worked
 	if (image_data == nullptr) {
@@ -51,7 +59,7 @@ int main()
 
 	}
 
-	stbi_write_png("gray-scale.jpeg", width, height, pixel_width, image_data, width * pixel_width);
+	stbi_write_png(argv[2], width, height, pixel_width, image_data, width * pixel_width);
 
 	stbi_image_free(image_data);
 
