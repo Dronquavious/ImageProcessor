@@ -18,6 +18,16 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ImageProcessor.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="vendor\stb_image.h" />
+    <ClInclude Include="vendor\stb_image_write.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -126,13 +136,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="ImageProcessor.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="stb_image.h" />
-    <ClInclude Include="stb_image_write.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

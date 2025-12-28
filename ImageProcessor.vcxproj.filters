@@ -13,18 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8113b0a7-88a7-42ee-a382-ff9176dc2049}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor">
+      <UniqueIdentifier>{40c9c99d-2ac4-438d-9313-19c4d9bf8f6c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ImageProcessor.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\ImageProcessor.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stb_image.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="vendor\stb_image.h">
+      <Filter>vendor</Filter>
     </ClInclude>
-    <ClInclude Include="stb_image_write.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="vendor\stb_image_write.h">
+      <Filter>vendor</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
 </Project>
