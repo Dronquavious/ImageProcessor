@@ -21,11 +21,11 @@ The tool loads an image into a 1D array of `unsigned char` bytes, manipulates th
 ## 🛠️ Build Instructions
 
 ### Prerequisites
-* **Visual Studio 2022 (or any C++ compiler).
+* **Visual Studio 2022** (or any C++ compiler)
 
 1. Clone the repo
 	```bash
-    git clone [https://github.com/Dronquavious/ImageProcessor.git](https://github.com/Dronquavious/ImageProcessor.git)
+    git clone https://github.com/Dronquavious/ImageProcessor.git
     ```
 2. Open Project: Open ImageProcessor.slnx in Visual Studio.
 3. Build: Press Ctrl + Shift + B or click Build Solution
@@ -40,14 +40,18 @@ Run the tool from the command line:
 
 Examples:
 
+```bash
 # Convert to Grayscale
 ./ImageProcessor input.jpg output.png --grayscale
-
+```
+```bash
 # Invert Colors (Negative)
 ./ImageProcessor input.jpg output.png --invert
-
+```
+```bash
 # Apply Blur
 ./ImageProcessor input.jpg output.png --blur
+```
 
 ## 📂 Project Structure
 
@@ -55,7 +59,8 @@ Examples:
 * `vendor/`: Third-party header-only libraries (stb_image).
 
 ## Dependencies
-    // add
+- [stb single-file public domain libraries](https://github.com/nothings/stb)
+- Place ```stb_image.h``` and ```stb_image_write.h``` in the ```vendor/``` directory
 
 
 ## 📄 License
